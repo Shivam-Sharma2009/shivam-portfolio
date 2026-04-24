@@ -53,7 +53,7 @@ window.addEventListener('scroll', () => {
 const typedTextSpan = document.getElementById("typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Full Stack Developer", "UI/UX Enthusiast", "Problem Solver"];
+const textArray = ['1st Year CSE Student.', 'AI/ML Enthusiast.', 'Tech Explorer.'];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 2000;
