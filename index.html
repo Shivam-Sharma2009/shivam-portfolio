@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shivam Sharma's personal portfolio – Full Stack Developer specializing in modern web apps, UI/UX, and scalable backend solutions.">
+  <title>Shivam Sharma | Full Stack Developer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Particle Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Header -->
+  <header id="header">
+    <nav class="navbar">
+      <div class="logo">S<span>.</span></div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-sm hire-btn">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <!-- Mobile Dropdown -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#portfolio" class="mobile-link">Portfolio</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">👋 Hello, I'm</p>
+      <h1 class="hero-name">Shivam Sharma</h1>
+      <h2 class="hero-role">I'm a <span id="typed-text"></span><span class="cursor">|</span></h2>
+      <p class="hero-desc">I craft clean, performant digital experiences — from pixel-perfect UIs to powerful backend systems.</p>
+      <div class="hero-cta">
+        <a href="#portfolio" class="btn btn-primary">View My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Talk</a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://github.com/Shivam-Sharma2009" target="_blank" id="hero-github" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="#" id="hero-linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" id="hero-twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="image-ring">
+        <img src="profile.png" alt="Shivam – Full Stack Developer">
+      </div>
+      <div class="glow-blob"></div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-label">Who Am I</span>
+        <h2 class="section-title">About <span>Me</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text" data-aos>
+          <p>I'm a passionate <strong>Full Stack Developer</strong> with a love for building elegant, high-performance web applications. I thrive at the intersection of design and engineering — turning complex problems into simple, beautiful solutions.</p>
+          <p>When I'm not coding, you'll find me exploring new frameworks, contributing to open source, or binge-watching tech talks. I'm always hungry to learn and grow.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-number" data-target="15">0</span><span>+</span>
+              <p>Projects Done</p>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="3">0</span><span>+</span>
+              <p>Years Experience</p>
+            </div>
+            <div class="stat">
+              <span class="stat-number" data-target="10">0</span><span>+</span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+          <a href="#" class="btn btn-primary" id="download-cv">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+        <div class="about-skills" data-aos>
+          <h3>My Skills</h3>
+          <div class="skill-bars">
+            <div class="skill">
+              <div class="skill-info"><span>HTML / CSS</span><span>95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>JavaScript</span><span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>React.js</span><span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Node.js / Express</span><span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Python</span><span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>MongoDB / SQL</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+          </div>
+          <div class="tech-chips">
+            <span>Git</span><span>Docker</span><span>REST APIs</span>
+            <span>Figma</span><span>Linux</span><span>AWS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-label">What I Do</span>
+        <h2 class="section-title">My <span>Services</span></h2>
+      </div>
+      <div class="services-grid">
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Building fast, responsive websites and web apps using modern frameworks like React and Next.js, with clean semantic code.</p>
+          <span class="service-number">01</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Scalable REST APIs and server-side architecture using Node.js, Express, Python, and robust database solutions.</p>
+          <span class="service-number">02</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+          <h3>UI / UX Design</h3>
+          <p>Crafting intuitive user interfaces and delightful user experiences with attention to detail, accessibility, and aesthetics.</p>
+          <span class="service-number">03</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3>Responsive Design</h3>
+          <p>Ensuring every project looks and works flawlessly across all screen sizes — mobile, tablet, and desktop.</p>
+          <span class="service-number">04</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-database"></i></div>
+          <h3>Database Design</h3>
+          <p>Designing efficient schemas and optimizing queries for both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) databases.</p>
+          <span class="service-number">05</span>
+        </div>
+        <div class="service-card" data-aos>
+          <div class="service-icon"><i class="fas fa-rocket"></i></div>
+          <h3>Performance & SEO</h3>
+          <p>Optimizing web apps for speed, Core Web Vitals, and search engine visibility to maximize reach and engagement.</p>
+          <span class="service-number">06</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-label">My Work</span>
+        <h2 class="section-title">Recent <span>Projects</span></h2>
+      </div>
+      <div class="filter-tabs" data-aos>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="api">Backend</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card" data-category="web" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p1">
+              <i class="fas fa-shopping-cart"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3>E-Commerce Platform</h3>
+            <p>A full-featured online store with cart, payments via Stripe, auth, and admin dashboard. Built with React & Node.js.</p>
+            <div class="project-techs">
+              <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="api" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p2">
+              <i class="fas fa-tasks"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Backend</span>
+            <h3>Task Management API</h3>
+            <p>RESTful API with JWT auth, role-based access, real-time notifications via WebSockets, and PostgreSQL backend.</p>
+            <div class="project-techs">
+              <span>Node.js</span><span>PostgreSQL</span><span>JWT</span><span>Socket.io</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="design" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p3">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Design</span>
+            <h3>Analytics Dashboard</h3>
+            <p>Beautiful real-time analytics dashboard with interactive charts, dark mode, and customizable widgets.</p>
+            <div class="project-techs">
+              <span>React</span><span>Chart.js</span><span>Tailwind</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="web" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p4">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Web App</span>
+            <h3>AI Study Assistant</h3>
+            <p>GPT-powered study tool that generates flashcards, quizzes, and summaries from uploaded PDFs and notes.</p>
+            <div class="project-techs">
+              <span>Python</span><span>OpenAI</span><span>FastAPI</span><span>React</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="api" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p5">
+              <i class="fas fa-lock"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Backend</span>
+            <h3>Auth Microservice</h3>
+            <p>Production-ready authentication microservice with OAuth2, 2FA, refresh tokens, and rate limiting.</p>
+            <div class="project-techs">
+              <span>Node.js</span><span>Redis</span><span>OAuth2</span><span>Docker</span>
+            </div>
+          </div>
+        </div>
+        <div class="project-card" data-category="design" data-aos>
+          <div class="project-img">
+            <div class="project-placeholder p6">
+              <i class="fas fa-palette"></i>
+            </div>
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary">Live Demo</a>
+              <a href="#" class="btn btn-sm btn-outline">GitHub</a>
+            </div>
+          </div>
+          <div class="project-info">
+            <span class="project-tag">Design</span>
+            <h3>Design System Kit</h3>
+            <p>Comprehensive UI component library with 50+ components, dark/light themes, and Storybook documentation.</p>
+            <div class="project-techs">
+              <span>React</span><span>Storybook</span><span>CSS Modules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="section-header" data-aos>
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Contact <span>Me</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos>
+          <h3>Let's work together</h3>
+          <p>Have a project in mind or just want to say hi? My inbox is always open. I'll try my best to get back to you!</p>
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:pgcshivamsharma@gmail.com">pgcshivamsharma@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span>Location</span>
+                <a href="#">India</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <span>GitHub</span>
+                <a href="https://github.com/Shivam-Sharma2009" target="_blank">github.com/Shivam-Sharma2009</a>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com/Shivam-Sharma2009" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form" data-aos>
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <label for="email">Your Email</label>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <label for="subject">Subject</label>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+            <label for="message">Your Message</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+          <div class="form-success" id="form-success">
+            <i class="fas fa-check-circle"></i> Message sent successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">S<span>.</span></div>
+        <p>Building digital experiences with passion and precision.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Shivam Sharma. All rights reserved.</p>
+        <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
