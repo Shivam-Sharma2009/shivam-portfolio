@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shivam Sharma's personal portfolio – Full Stack Developer specializing in modern web apps, UI/UX, and scalable backend solutions.">
-  <title>Shivam Sharma | Full Stack Developer</title>
+  <meta name="description" content="Shivam Sharma – 2nd Year CS Student specializing in AI/ML. Portfolio showcasing skills, interests, and future projects.">
+  <title>Shivam Sharma | CS Student & AI/ML Enthusiast</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
+
+  <!-- Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Custom Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
 
   <!-- Particle Canvas -->
   <canvas id="particles-canvas"></canvas>
@@ -48,7 +57,7 @@
       <p class="hero-greeting">👋 Hello, I'm</p>
       <h1 class="hero-name">Shivam Sharma</h1>
       <h2 class="hero-role">I'm a <span id="typed-text"></span><span class="cursor">|</span></h2>
-      <p class="hero-desc">I am a Second-year Computer Science student specializing in Artificial Intelligence and Machine Learning, eager to build the future.</p>
+      <p class="hero-desc">I am a 2nd-year Computer Science student specializing in Artificial Intelligence and Machine Learning, actively building projects and shaping the future.</p>
       <div class="hero-cta">
         <a href="#about" class="btn btn-primary">Know More</a>
         <a href="#contact" class="btn btn-outline">Let's Talk</a>
@@ -81,23 +90,23 @@
       </div>
       <div class="about-grid">
         <div class="about-text" data-aos>
-          <p>I'm a driven <strong>Computer Science Student</strong> currently in my first year, specializing in <strong>Artificial Intelligence and Machine Learning</strong>. I have a growing foundation in programming and a deep curiosity for how intelligent systems work.</p>
-          <p>As I begin my journey into the tech world, I am eager to learn new technologies, tackle complex algorithms, and eventually build projects that make a real-world impact.</p>
+          <p>I'm a driven <strong>Computer Science Student</strong> currently in my <strong>2nd year</strong>, specializing in <strong>Artificial Intelligence and Machine Learning</strong>. I have a solid foundation in programming and a deep curiosity for how intelligent systems work.</p>
+          <p>As I grow deeper into the tech world, I am actively learning new technologies, solving complex algorithmic problems, and building projects that create a real-world impact.</p>
           <div class="about-stats">
             <div class="stat">
-              <span class="stat-number" data-target="1">0</span><span>st</span>
+              <span class="stat-number" data-target="2">0</span><span>nd</span>
               <p>Year Student</p>
             </div>
             <div class="stat">
-              <span class="stat-number" data-target="100">0</span><span>%</span>
-              <p>Eager to Learn</p>
+              <span class="stat-number" data-target="5">0</span><span>+</span>
+              <p>Projects Done</p>
             </div>
             <div class="stat">
-              <span class="stat-number" data-target="1">0</span><span>+</span>
-              <p>AI/ML Focus</p>
+              <span class="stat-number" data-target="3">0</span><span>+</span>
+              <p>Tech Stacks</p>
             </div>
           </div>
-          <a href="#" class="btn btn-primary" id="download-cv">
+          <a href="resume.html" download="Shivam_Sharma_Resume.html" class="btn btn-primary" id="download-cv" target="_blank">
             <i class="fas fa-download"></i> Download CV
           </a>
         </div>
@@ -105,25 +114,30 @@
           <h3>My Skills</h3>
           <div class="skill-bars">
             <div class="skill">
-              <div class="skill-info"><span>C Programming</span><span>70%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+              <div class="skill-info"><span>C / C++ Programming</span><span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Python (Basics)</span><span>60%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="60"></div></div>
+            </div>
+            <div class="skill">
+              <div class="skill-info"><span>Data Structures & Algorithms</span><span>65%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="65"></div></div>
             </div>
             <div class="skill">
               <div class="skill-info"><span>Mathematics & Logic</span><span>80%</span></div>
               <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
             </div>
             <div class="skill">
-              <div class="skill-info"><span>Problem Solving</span><span>75%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
-            </div>
-            <div class="skill">
-              <div class="skill-info"><span>AI / ML Concepts (Learning)</span><span>30%</span></div>
-              <div class="skill-bar"><div class="skill-fill" data-width="30"></div></div>
+              <div class="skill-info"><span>AI / ML Concepts</span><span>45%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="45"></div></div>
             </div>
           </div>
           <div class="tech-chips">
-            <span>C</span><span>AI</span><span>Machine Learning</span>
-            <span>Algorithms</span><span>Data Structures</span>
+            <span>C</span><span>C++</span><span>Python</span>
+            <span>AI</span><span>Machine Learning</span>
+            <span>DSA</span><span>OOP</span><span>Linux</span>
           </div>
         </div>
       </div>
@@ -235,6 +249,11 @@
           </div>
         </div>
         <form class="contact-form" id="contact-form" data-aos>
+          <!-- Web3Forms Access Key & Config -->
+          <input type="hidden" name="access_key" id="web3forms_key" value="YOUR_ACCESS_KEY_HERE">
+          <input type="hidden" name="from_name" value="Portfolio Visitor">
+          <input type="hidden" name="subject" value="New Portfolio Message from Shivam's Website">
+          
           <div class="form-group">
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <label for="name">Your Name</label>
@@ -244,7 +263,7 @@
             <label for="email">Your Email</label>
           </div>
           <div class="form-group">
-            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <input type="text" id="subject" name="custom_subject" placeholder="Subject" required>
             <label for="subject">Subject</label>
           </div>
           <div class="form-group">
@@ -256,7 +275,10 @@
             <i class="fas fa-paper-plane"></i>
           </button>
           <div class="form-success" id="form-success">
-            <i class="fas fa-check-circle"></i> Message sent successfully!
+            <i class="fas fa-check-circle"></i> Message sent! I'll get back to you soon. 🚀
+          </div>
+          <div class="form-error" id="form-error">
+            <i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or email me directly.
           </div>
         </form>
       </div>
