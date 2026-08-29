@@ -11,6 +11,11 @@
   --card-hover: #1e1e2d;
   --transition: all 0.3s ease;
   --glow: 0 0 20px rgba(108, 99, 255, 0.4);
+  /* New variables for glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(12px);
+  /* Gradient background */
+  --gradient-bg: linear-gradient(135deg, var(--bg-color), var(--bg-color-alt));
 }
 
 * {
@@ -25,7 +30,7 @@ html {
 }
 
 body {
-  background-color: var(--bg-color);
+  background: var(--gradient-bg);
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
@@ -900,4 +905,103 @@ header {
 .fade-in.appear {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* ---- SCROLL PROGRESS BAR ---- */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ---- CUSTOM CURSOR ---- */
+#cursor-dot, #cursor-ring {
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 99998;
+  transition: transform 0.1s ease;
+}
+
+#cursor-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--accent-primary);
+}
+
+#cursor-ring {
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(108, 99, 255, 0.5);
+  background: transparent;
+  transition: left 0.08s linear, top 0.08s linear, transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+#cursor-ring.cursor-hover {
+  width: 56px;
+  height: 56px;
+  border-color: var(--accent-secondary);
+  background: rgba(255, 101, 132, 0.07);
+}
+
+@media (max-width: 768px) {
+  #cursor-dot, #cursor-ring { display: none; }
+}
+
+/* ---- FORM ERROR MESSAGE ---- */
+.form-error {
+  display: none;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 77, 77, 0.1);
+  color: #ff4d4d;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 77, 77, 0.2);
+}
+
+/* ---- CARD TILT SMOOTH RESET ---- */
+.service-card, .project-card {
+  will-change: transform;
+}
+
+/* ---- ENHANCED HERO NAME GRADIENT ---- */
+.hero-name {
+  background: linear-gradient(90deg, var(--text-primary) 60%, var(--accent-primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ---- GLOWING SECTION LABEL ---- */
+.section-label {
+  text-shadow: 0 0 10px rgba(255, 101, 132, 0.4);
+}
+
+/* ---- RESPONSIVE (existing) ---- */
+@media (max-width: 992px) {
+  .hero { flex-direction: column-reverse; text-align: center; padding-top: 100px; }
+  .hero-cta { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .section-title { font-size: 2rem; }
+  .hero-name { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+  .nav-links, .hire-btn { display: none; }
+  .hamburger { display: flex; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .image-ring { width: 280px; height: 280px; }
+  .about-stats { flex-direction: column; gap: 15px; }
+  .contact-form { padding: 25px; }
 }
