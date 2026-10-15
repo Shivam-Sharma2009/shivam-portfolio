@@ -60,18 +60,34 @@ if (hamburger && mobileMenu) {
 }
 
 // =============================================
-//  HEADER SHRINK ON SCROLL
+//  SMART NAVBAR: HIDE ON SCROLL DOWN, SHOW ON SCROLL UP
 // =============================================
+let lastScrollY = window.scrollY;
+const scrollThreshold = 8;
+
 window.addEventListener('scroll', () => {
     if (!header) return;
-    if (window.scrollY > 50) {
-        header.style.padding    = '12px 5%';
-        header.style.boxShadow  = '0 8px 30px rgba(0,0,0,0.6)';
+
+    const currentScrollY = window.scrollY;
+    if (currentScrollY <= 50) {
+        header.classList.remove('navbar-hidden');
+        header.style.boxShadow = 'none';
     } else {
-        header.style.padding    = '20px 5%';
-        header.style.boxShadow  = 'none';
+        header.style.boxShadow = '0 8px 30px rgba(0,0,0,0.35)';
+
+        if (currentScrollY > lastScrollY + scrollThreshold) {
+            // Scrolling down: hide the navbar.
+            header.classList.add('navbar-hidden');
+            mobileMenu?.classList.remove('active');
+            hamburger?.classList.remove('active');
+        } else if (currentScrollY < lastScrollY - scrollThreshold) {
+            // Scrolling up: show the navbar.
+            header.classList.remove('navbar-hidden');
+        }
     }
-});
+
+    lastScrollY = currentScrollY;
+}, { passive: true });
 
 // =============================================
 //  ACTIVE NAV LINK ON SCROLL
