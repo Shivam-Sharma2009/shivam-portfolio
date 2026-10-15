@@ -134,6 +134,9 @@ body {
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
   z-index: 1000;
   background: var(--nav-bg);
@@ -1058,4 +1061,10 @@ header {
   .project-actions .btn {
     flex: 1 1 100%;
   }
+}
+
+
+/* Hide navbar while scrolling down; reveal it while scrolling up */
+header.navbar-hidden {
+  transform: translateY(-100%);
 }
