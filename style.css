@@ -1005,3 +1005,57 @@ header {
   .about-stats { flex-direction: column; gap: 15px; }
   .contact-form { padding: 25px; }
 }
+
+
+/* ---------- FEATURED PROJECTS ---------- */
+.section-intro {
+  max-width: 660px;
+  margin: 16px auto 0;
+  color: var(--text-secondary);
+}
+.project-art {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+.project-art i {
+  font-size: 3.5rem;
+}
+.project-art-ai {
+  background: radial-gradient(circle at 25% 20%, rgba(108,99,255,.55), transparent 40%), linear-gradient(135deg, #111128, #24204a 55%, #15151f);
+}
+.project-art-sportfit {
+  background: radial-gradient(circle at 75% 20%, rgba(44,205,143,.45), transparent 38%), linear-gradient(135deg, #10251f, #174a3b 55%, #101b1a);
+}
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+.project-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.project-actions .btn-outline {
+  color: var(--text-primary);
+  border-color: rgba(255,255,255,.24);
+}
+.project-actions .btn-outline:hover {
+  border-color: var(--accent-primary);
+  color: #fff;
+}
+@media (max-width: 480px) {
+  .project-actions .btn {
+    flex: 1 1 100%;
+  }
+}
