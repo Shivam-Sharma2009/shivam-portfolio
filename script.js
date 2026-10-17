@@ -401,3 +401,53 @@ if (canvas) {
     initParticles();
     animate();
 }
+
+
+// =============================================
+//  FOOTER FLIP CLOCK (DEVICE LOCAL TIME)
+// =============================================
+(() => {
+    const clock = document.getElementById('flip-clock');
+    const dateLabel = document.getElementById('flip-clock-date');
+    if (!clock || !dateLabel) return;
+
+    const parts = {
+        hours: clock.querySelector('[data-clock-part="hours"]'),
+        minutes: clock.querySelector('[data-clock-part="minutes"]'),
+        seconds: clock.querySelector('[data-clock-part="seconds"]'),
+        period: clock.querySelector('[data-clock-part="period"]')
+    };
+    const previousValues = {};
+
+    function updateClock() {
+        const now = new Date();
+        const hours24 = now.getHours();
+        const hours12 = hours24 % 12 || 12;
+        const values = {
+            hours: String(hours12).padStart(2, '0'),
+            minutes: String(now.getMinutes()).padStart(2, '0'),
+            seconds: String(now.getSeconds()).padStart(2, '0'),
+            period: hours24 >= 12 ? 'PM' : 'AM'
+        };
+
+        Object.entries(values).forEach(([key, value]) => {
+            const element = parts[key];
+            if (!element || previousValues[key] === value) return;
+            element.textContent = value;
+            element.classList.remove('flip');
+            void element.offsetWidth;
+            element.classList.add('flip');
+            previousValues[key] = value;
+        });
+
+        dateLabel.textContent = new Intl.DateTimeFormat(undefined, {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        }).format(now);
+    }
+
+    updateClock();
+    window.setInterval(updateClock, 1000);
+})();
