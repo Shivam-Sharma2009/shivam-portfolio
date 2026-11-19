@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:2563eb,100:06b6d4&height=200&section=header&text=Shivam%20Sharma&fontSize=48&fontColor=ffffff&fontAlignY=38&desc=Computer%20Science%20%7C%20AI%20%26%20ML%20%7C%20Developer&descAlignY=60&descSize=18" width="100%" />
+# Shivam Sharma
 
 ### Computer Science Student • AI & Machine Learning • Developer
 
@@ -108,22 +108,16 @@ Open `index.html` in your browser, or launch it with VS Code **Live Server**.
 
 ## 📬 Connect with me
 
-<p align="center">
+<div align="center">
 
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pgcshivamsharma@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Shivam%20Sharma-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/shivam-sharma2009)
 [![GitHub](https://img.shields.io/badge/GitHub-Shivam--Sharma2009-181717?style=for-the-badge&logo=github)](https://github.com/Shivam-Sharma2009)
-
-</p>
-
-<div align="center">
 
 ---
 
 **Thanks for visiting!** ⭐
 
 <sub>Made with ❤️ by Shivam Sharma</sub>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,50:2563eb,100:0f172a&height=100&section=footer" width="100%" />
 
 </div>
