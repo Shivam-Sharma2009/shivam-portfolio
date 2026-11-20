@@ -110,6 +110,7 @@ Open `index.html` in your browser, or launch it with VS Code **Live Server**.
 
 <div align="center">
 
+[![Business & Sponsorship](https://img.shields.io/badge/Business%20%26%20Sponsorship-Email-8B5CF6?style=for-the-badge&logo=yahoo&logoColor=white)](mailto:shivamcomputer57@yahoo.com)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pgcshivamsharma@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Shivam%20Sharma-0A66C2?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/shivam-sharma2009)
 [![GitHub](https://img.shields.io/badge/GitHub-Shivam--Sharma2009-181717?style=for-the-badge&logo=github)](https://github.com/Shivam-Sharma2009)
